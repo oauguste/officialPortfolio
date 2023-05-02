@@ -6,6 +6,7 @@
 
 .container {
   background-color: #111;
+  overflow: hidden;
 }
 
 .salute {
@@ -17,11 +18,15 @@
 .saluteTextContainer {
   flex: 3;
 }
+
 .saluteImg {
   flex: 1;
   height: 100%;
   width: 100%;
+
+  position: relative;
 }
+
 .saluteText {
   color: #333;
   font-size: 60vw;
@@ -29,7 +34,7 @@
 }
 .nameContainer {
   height: 100vh;
-  background-color: rebeccapurple;
+  background-color: #111;
 }
 .name {
   font-size: 20vw;
@@ -41,23 +46,7 @@
 .jobTitleContainer {
   height: 100vh;
 }
-.dark {
-  background: black
-    url("./img/vectorstock_1112511/vectorstock_1112511.png");
-  /* background-repeat: no-repeat; */
-  background-size: cover;
-  /* height: 100vh; */
-}
-svg {
-  color: rebeccapurple;
-}
-.purple {
-  background: rebeccapurple url("./img/background.png");
-}
-/* .purple {
-  background: url("./img/background.png");
-  background-color: #333;
-} */
+
 .jobTitle {
   font-size: 10vw;
   color: #333;
@@ -115,10 +104,10 @@ svg {
   align-items: center;
 }
 .projectTitle {
-  font-size: 7vw;
+  font-size: 10vw;
   color: #555;
 }
-.projectDescription {
+.projectDesc {
   text-align: justify;
   line-height: 40px;
   color: #555;
@@ -214,4 +203,45 @@ svg {
 }
 .githubChart:hover .active:nth-child(2n) {
   background-color: #063f24;
+}
+.githubSm {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .projects {
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .project {
+    flex-direction: column;
+    height: max-content;
+  }
+  .project:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .phone,
+  .laptop {
+    transform: none !important;
+  }
+
+  .githubChart {
+    display: none;
+  }
+
+  .githubTitle {
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  .githubSm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #555;
+    font-size: 30px;
+    text-align: center;
+  }
 }
