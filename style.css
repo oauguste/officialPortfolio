@@ -59,7 +59,7 @@
   padding: 0 100px;
 }
 .projectTitle {
-  font-size: 10vw;
+  font-size: 3vw;
   color: whitesmoke;
 }
 .project {
@@ -67,7 +67,7 @@
   align-items: center;
   gap: 100px;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .project:nth-child(2n) {
   flex-direction: row-reverse;
@@ -95,7 +95,16 @@
 .phoneApp {
   width: 100%;
 }
-
+.notePix {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+.restaurantPix {
+  object-fit: cover;
+  aspect-ratio: 3 / 6.5;
+}
 .projectDetail {
   display: flex;
   flex-direction: column;
@@ -121,8 +130,31 @@
   position: relative;
   overflow: hidden;
 }
+.projectButton2 {
+  padding: 5px;
+  background-color: white;
+  border: 2px solid #555;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
 .projectButton::after {
-  content: "view demo";
+  content: "Go to Site";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #555;
+  color: whitesmoke;
+  transition: 1s all;
+}
+.projectButton2::after {
+  content: "On gitHub";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -170,6 +202,9 @@
 .githubChart {
   width: 820px;
   text-align: center;
+}
+.gitHubIcon {
+  width: 200px;
 }
 
 .dates {
